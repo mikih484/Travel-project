@@ -1,7 +1,74 @@
-h1 {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 700;
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+header {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/images/bratislava.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 200px 0;
+  text-align: center;
+}
+
+header h1 {
   font-size: 96px;
-  line-height: 144px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 30px 0;
+}
+
+header h2 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+
+header h3 {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+header a {
+  background: white;
+  color: #272044;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  margin-top: 80px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 60px 0;
+  }
+
+  header h1 {
+    font-size: 48px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  header h3 {
+    font-size: 12px;
+  }
 }
