@@ -8,9 +8,22 @@ body {
 }
 
 section {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px;
+}
+
+section.secondary {
+  background-color: #f8f8f8;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
 }
 
 .grid {
@@ -24,6 +37,51 @@ section {
 
 .grid-3-columns-narrow {
   grid-template-columns: 1fr 2fr 2fr;
+}
+
+.grid-3-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 40px;
+}
+
+.embed {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.embed-video {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.card {
+  background-color: white;
+  margin: 30px 0;
+}
+
+.card-header.grid {
+  grid-gap: 0;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-footer {
+  padding: 20px 30px;
+}
+.btn {
+  background-color: #462cb3;
+  color: white;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.5px;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 header {
@@ -93,6 +151,22 @@ main h3 {
   margin: 0;
 }
 
+main h4 {
+  color: #272044;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+main h5 {
+  color: #272044;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
 main p {
   color: #272044;
   font-size: 16px;
@@ -101,6 +175,11 @@ main p {
   line-height: 1.5;
   opacity: 0.7;
 }
+
+.gallery {
+  padding: 30px 0;
+}
+
 footer {
   background-image:
     linear-gradient(rgba(39, 32, 68, 0.9), rgba(39, 32, 68, 0.9)),
@@ -138,11 +217,16 @@ footer a {
   opacity: 0.7;
 }
 
-img {
-  aspect-ratio: 5/4;
-  max-height: 481px;
-  object-fit: cover;
+@media (max-width: 1024px) {
+  .grid-3-columns {
+    grid-template-columns: 1fr;
+  }
+  .responsive {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
 }
+
 @media (max-width: 960px) {
   header {
     padding: 60px 0;
@@ -160,12 +244,19 @@ img {
     font-size: 12px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    grid-gap: 32px;
-  }
-
   section {
     padding: 30px;
+  }
+
+  .card-header img {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .embed {
+    aspect-ratio: 16/9;
   }
 }
